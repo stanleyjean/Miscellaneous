@@ -1,0 +1,15 @@
+library(tidyverse)
+table_r_d <-　table(r_score$reading_score, d_score$debate_score)
+table_r_v <- table(r_score$reading_score, v_score$video_score)
+table_r_m <- table(r_score$reading_score, m_score$material_score)
+
+
+table_d_v <- table(d_score$debate_score, v_score$video_score)
+table_d_m <- table(d_score$debate_score, m_score$material_score)
+
+table_v_m <- table(v_score$video_score, m_score$material_score)
+
+addmargins(table_r_d)
+chisq.test(table_r_d)
+
+bartlett.test(num_scores_value$reading_score, num_scores_value$video_score)

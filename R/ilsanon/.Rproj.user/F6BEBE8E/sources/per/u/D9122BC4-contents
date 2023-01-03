@@ -1,0 +1,49 @@
+library(tidyverse)
+shapiro.test(num_scores_value$reading_score)
+shapiro.test(num_scores_value$debate_score)
+shapiro.test(num_scores_value$video_score)
+shapiro.test(num_scores_value$material_score)
+
+num_scores_value$reading_score
+num_scores_value$video_score
+wilcox.test()
+
+wilcox.test(num_scores_value$reading_score, num_scores_value$debate_score, paired=TRUE, exact = FALSE)
+wilcox.test(num_scores_value$reading_score, num_scores_value$video_score, paired=TRUE, exact = FALSE)
+wilcox.test(num_scores_value$reading_score, num_scores_value$material_score, paired=TRUE, exact = FALSE)
+
+wilcox.test(num_scores_value$debate_score, num_scores_value$video_score, paired=TRUE, exact = FALSE)
+wilcox.test(num_scores_value$debate_score, num_scores_value$material_score, paired=TRUE, exact = FALSE)
+
+wilcox.test(num_scores_value$video_score, num_scores_value$material_score, paired=TRUE, exact = FALSE)
+
+kruskal.test(list(rr$reading_score, dd$debate_score, vv$video_score, mm$material_score))
+# 
+# r_score <-r_score %>% mutate(reading_score = as.numeric(reading_score))
+# d_score <- d_score %>% mutate(debate_score = as.numeric(debate_score))
+# v_score <- v_score %>% mutate(video_score = as.numeric(video_score))
+# m_score <- m_score %>% mutate(material_score = as.numeric(material_score))
+rr <- r_score %>% count(reading_score)
+dd <- d_score %>% count(debate_score)
+vv <- v_score %>% count(video_score)
+mm <- m_score %>% count(material_score)
+rr
+rr <- rr %>%  add_row(reading_score = "3", n =0, .before = 1)
+rr <- rr %>%  add_row(reading_score = "2", n =0, .before = 1)
+rr <- rr %>%  add_row(reading_score = "1", n =0, .before = 1)
+rr
+dd
+
+dd <- dd %>% add_row(debate_score = "2", n = 0, .before = 1)
+dd <- dd %>% add_row(debate_score = "1", n = 0, .before = 1)
+dd
+
+vv
+
+vv <- vv %>% add_row(video_score = "1", n = 0, .before = 1)
+vv
+
+mm <- mm %>% add_row(material_score = "1", n = 0, .before = 1)
+mm
+rr <- rr %>% mutate(reading_score = as.numeric(reading_score))
+dd <- dd %>% mutate(debate_score = as.numeric(debate_score))

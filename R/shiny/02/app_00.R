@@ -1,0 +1,68 @@
+library(shiny)
+
+# user interface part (front-end)
+# app behaviour part (back-end, server side)
+
+# 특정 값을 담는 변수는 ui variable 외부에 선언되어야 함 
+animals <- c("dog", "cat", "mouse", "bird", "other", "I hate animals")
+
+ui <- fluidPage(
+    textInput("name", "What's your name?"),
+    passwordInput("password", "What's your password?"),
+    textAreaInput("story", "Tell me about your story.", rows = 3),
+
+    # validate() to ensure ceratin properties for text
+
+    numericInput("num", "Number one", value = 0, min = 0, max = 100),
+    sliderInput("num2", "Number two", value = 50, min = 0, max = 100),
+    sliderInput("rng", "Range", value = c(10, 20), min = 0, max = 100),
+
+
+    dateInput("dob", "When were you born?"),
+    dateRangeInput("holiday", "When do you want to go on vacation next?"),
+
+    # Generating limited choices
+
+    selectInput("state", "What's your favourite state?", state.name),
+    radioButtons("animal", "What's your favourite animal?", animals),
+
+    radioButtons("rb", "Choose one:",
+    choiceNames = list(
+      icon("angry"),
+      icon("smile"),
+      icon("sad-tear")
+    ),
+    choiceValues = list("angry", "happy", "sad")
+    ),
+
+    checkboxGroupInput("animal", "What animals do you like?", animals),
+
+    # for a single yes/no question 
+    checkboxInput("cleanup", "Clean up?", value = TRUE),
+    checkboxInput("shutdown", "Shutdown?"),
+
+    # file upload
+    fileInput("upload", NULL),
+
+    # buttons 
+    actionButton("click", "Click me!"),
+    actionButton("drink", "Drink me!", icon = icon("cocktail")),
+
+    fluidRow(
+        actionButton("click", "Click me!", class = "btn-danger"),
+        actionButton("drink", "Drink me!", class = "btn-lg btn-success")
+    ),
+
+    fluidRow(
+        actionButton("eat", "Eat me!", class = "btn-block")
+    )
+
+)
+
+server <- function(input, output, session){
+
+}
+
+shinyApp(ui, server)
+
+shiny::runApp()

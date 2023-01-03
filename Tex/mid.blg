@@ -1,0 +1,5 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'mid.blg'
+[155] biber-MSWIN32:340> INFO - === 
+[950] Utils.pm:410> ERROR - Cannot find 'mid.bcf'!
+[950] Biber.pm:135> INFO - ERRORS: 1

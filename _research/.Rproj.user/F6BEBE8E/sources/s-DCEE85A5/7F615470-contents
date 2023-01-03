@@ -1,0 +1,32 @@
+install.packages("RColorBrewers")
+library(RColorBrewer)
+lib_call()
+colnames(RWB)
+nb.cols <- length(unique(df$region))
+mycolors <- colorRampPalette(brewer.pal(8, "Set3"))(nb.cols)
+
+df <- RWB %>% select(-c('MEAS', 'TIME_FORMAT', 'UNIT', 'POWERCODE'))
+
+df <- df %>% pivot_wider(names_from = "IND", values_from = "obsValue")
+df <- df %>% mutate(region = str_sub(REG_ID, start = 1, end = 2))
+unique(RWB$IND)
+
+df %>% mutate(INCOME_DISP = log(INCOME_DISP)) %>% 
+  filter(!str_detect(region, "ME")) %>% 
+  filter(obsTime == "2014") %>% 
+  ggplot(aes(x = INCOME_DISP, y = SUBJ_LIFE_SAT)) +
+  geom_jitter(aes(colour = region)) +
+  geom_smooth(se = F, method = "lm") +
+  theme_tufte() +
+  stat_poly_eq() +
+#  facet_wrap(~obsTime) +
+  scale_x_continuous(limits = c(min(df$INCOME_DISP), max(df$INCOME_DISP))) +
+  scale_colour_manual(values = mycolors)
+
+
+lib_call()
+
+library(httpgd)
+hgd()
+hgd_view()
+hgd_browse()

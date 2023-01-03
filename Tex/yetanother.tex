@@ -1,0 +1,71 @@
+\documentclass[chapter]{oblivoir}
+
+\usepackage{blindtext}
+
+\usepackage{xcolor}
+\definecolor{color3}{cmyk}{1,0,0,0}
+
+\makeatletter
+\makechapterstyle{colorchap}{%
+	\setlength{\beforechapskip}{0pt}
+	\setlength{\midchapskip}{10pt}
+	\setlength{\afterchapskip}{24pt}
+	\renewcommand*\chapnamefont{\color{color3}\Huge}
+	\renewcommand*\chapnumfont{\color{color3}\Huge}
+	\renewcommand*\chaptitlefont{\color{color3}\HUGE}
+%%% redefine these commands to restore the original settings
+	\renewcommand*\chapternamenum{\space}
+	\renewcommand*\prechapternum{\hfill\chapnamefont\pre@chapter}
+	\renewcommand*\printchapternum{\chapnumfont\thechapter}
+	\renewcommand*\postchapternum{\chapnamefont\post@chapter}
+	\renewcommand*\printchaptertitle[1]{\hfill\chaptitlefont##1}
+	\renewcommand*\hchaptertitlehead{\pre@chapter\,\thechapter\,\post@chapter}
+}
+
+\makechapterstyle{colorchapvar}{%
+	\chapterstyle{colorchap}
+	\renewcommand*\chapternamenum{}
+	\renewcommand*\prechapternum{\hfill\chapnamefont\DUMWORD}
+	\renewcommand*\postchapternum{}
+	\renewcommand*\printchapternum{}
+	\renewcommand*\hchaptertitlehead{\DUMWORD}
+}
+\makeatother
+
+\begin{document}
+
+\chapterstyle{colorchap}
+\frontmatter
+\tableofcontents*
+
+\mainmatter
+ 
+\chapter{테스트 1}
+\Blindtext
+\Blindtext
+\Blindtext
+ 
+\chapter{테스트 2}
+\Blindtext
+
+\def\DUMWORD{콩쥐팥쥐}
+\chapterstyle{colorchapvar}
+\chapter{테스트 3}
+\Blindtext
+\Blindtext
+ 
+\chapterstyle{colorchap}
+\chapter{테스트 4}
+\Blindtext
+\Blindtext
+\Blindtext
+\Blindtext
+\Blindtext
+\Blindtext
+
+\def\DUMWORD{부록}
+\chapterstyle{colorchapvar}
+\chapter{테스트 5}
+\Blindtext
+ 
+\end{document}

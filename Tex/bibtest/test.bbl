@@ -1,0 +1,195 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Absil2006}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9a81fe9ad87cf630eb4a68e86949545d}{%
+           family={Absil},
+           familyi={A\bibinitperiod},
+           given={P.-A.},
+           giveni={P\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84623d83b4da798575555d3a941867da}{%
+           family={Kurdyka},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{fullhash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{bibnamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authorbibnamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authornamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authorfullhash}{85a7e90ab257188255b9f25a7a701319}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systems \& Control Letters}
+      \field{number}{7}
+      \field{title}{On the stable equilibrium points of gradient systems}
+      \field{volume}{55}
+      \field{year}{2006}
+      \field{pages}{573\bibrangedash 577}
+      \range{pages}{5}
+    \endentry
+    \entry{Anderson2008}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9c4907fba3bcfe2b7d872b2844ac97bf}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={B.\bibnamedelimi D.\bibnamedelimi O.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00016298770e12225f3d58b83d34248d}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f1564811f804addbc5b149230abbb52}{%
+           family={Fidan},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33f73bfec46af7fe9fdc379d8dc865e8}{%
+           family={Hendrickx},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5066317ad93f8341632ed2ff49d8639}
+      \strng{fullhash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{bibnamehash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{authorbibnamehash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{authornamehash}{a5066317ad93f8341632ed2ff49d8639}
+      \strng{authorfullhash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Control Systems Magazine}
+      \field{number}{6}
+      \field{title}{Rigid graph control architectures for autonomous formations}
+      \field{volume}{28}
+      \field{year}{2008}
+      \field{pages}{48\bibrangedash 63}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{Absil2006}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9a81fe9ad87cf630eb4a68e86949545d}{%
+           family={Absil},
+           familyi={A\bibinitperiod},
+           given={P.-A.},
+           giveni={P\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84623d83b4da798575555d3a941867da}{%
+           family={Kurdyka},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{fullhash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{bibnamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authorbibnamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authornamehash}{85a7e90ab257188255b9f25a7a701319}
+      \strng{authorfullhash}{85a7e90ab257188255b9f25a7a701319}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systems \& Control Letters}
+      \field{number}{7}
+      \field{title}{On the stable equilibrium points of gradient systems}
+      \field{volume}{55}
+      \field{year}{2006}
+      \field{pages}{573\bibrangedash 577}
+      \range{pages}{5}
+    \endentry
+    \entry{Anderson2008}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9c4907fba3bcfe2b7d872b2844ac97bf}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={B.\bibnamedelimi D.\bibnamedelimi O.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00016298770e12225f3d58b83d34248d}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f1564811f804addbc5b149230abbb52}{%
+           family={Fidan},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33f73bfec46af7fe9fdc379d8dc865e8}{%
+           family={Hendrickx},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5066317ad93f8341632ed2ff49d8639}
+      \strng{fullhash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{bibnamehash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{authorbibnamehash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \strng{authornamehash}{a5066317ad93f8341632ed2ff49d8639}
+      \strng{authorfullhash}{eae46b4b01dd5722d1c1b9485eb7024f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Control Systems Magazine}
+      \field{number}{6}
+      \field{title}{Rigid graph control architectures for autonomous formations}
+      \field{volume}{28}
+      \field{year}{2008}
+      \field{pages}{48\bibrangedash 63}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

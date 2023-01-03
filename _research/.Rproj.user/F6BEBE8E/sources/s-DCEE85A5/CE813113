@@ -1,0 +1,26 @@
+{
+    "id": "CE813113",
+    "path": "A:/WORK/_research/first.R",
+    "project_path": "first.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1658467443307.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "3,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1658909373,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1672328622253,
+    "read_only": false,
+    "read_only_alternatives": []
+}

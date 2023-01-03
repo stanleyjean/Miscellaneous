@@ -1,0 +1,93 @@
+rb
+sc
+ee
+
+ee <- ee %>% filter(str_detect(IND, "EARLY_LEAVERS_RATE_Y18T24|NEAC_SHARE"))
+sc <- sc %>% filter(str_detect(IND, "EXCLU|LEAVERS|NEET|HOUSING|VEH_THEFT_RA"))
+ee <- ee %>% filter(ISC11 == "T")
+
+ee %>%
+  dplyr::group_by(REG_ID, ISC11, obsTime, IND) %>%
+  dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+  dplyr::filter(n > 1L) 
+
+t1 <- rb %>% pivot_wider(names_from = "IND", values_from = 'obsValue')
+t2 <- sc %>% pivot_wider(names_from = "IND", values_from = 'obsValue')
+t3 <- ee %>% filter(ISC11 == "T") %>% mutate(ID = row_number()) %>% 
+  pivot_wider(names_from = "IND", values_from = 'obsValue')
+t1 <- t1 %>% select(-c("obsTime", "region"))
+t2 <- t2 %>% select(-c("TIME", "region"))
+t3 <- t3 %>% select(-c("obsTime", "region")) %>% filter()
+ee %>% distinct(IND, obsValue, .keep_all = TRUE) %>% 
+  pivot_wider(names_from = "IND", values_from = 'obsValue')
+
+t3
+
+df <- inner_join(t1, t2, by = "REG_ID")
+df <- df %>% mutate(region = str_sub(REG_ID, start = 1, end = 2)) %>% 
+  relocate(region)
+write.csv(colnames(df), "joined_col.csv")
+
+df %>% 
+  ggplot(aes(x = HOMIC_RA, y = SUBJ_LIFE_SAT)) +
+  geom_point(aes(colour = region)) +
+  geom_smooth(se = F, method = "lm") +
+  theme_economist_white() +
+  stat_poly_eq()
+hgd()
+hgd_view()
+
+
+t3 <- 
+  dfe %>% filter(str_detect(IND, "EARLY_LEAVERS_RATE_Y18T24|NEAC_SHARE")) %>% 
+  pivot_wider(names_from = "IND", values_from = "obsValue") %>% 
+  select(-c("LOCATION", "GENDER", 'MEAS', 'TIME_FORMAT',
+            'UNIT', 'POWERCODE', 'obsTime', 'OBS_STATUS')) %>% 
+  filter(ISC11 == 'T')
+write.csv(t3, "temp.csv")
+
+write.csv(tt <- inner_join(t1, t3, by = "REG_ID"), "join_check.csv")
+tt
+colnames(tt)
+ttt <- inner_join(t1, t2, by = "REG_ID") 
+ttt %>% mutate(region = str_sub(REG_ID, start = 1, end = 2)) %>% 
+  ggplot(aes(x = VEH_THEFT_RA, y = SUBJ_LIFE_SAT)) +
+  geom_point(aes(colour = region)) +
+  geom_smooth(se = F, method = "lm") +
+  stat_poly_eq() + 
+  scale_colour_few() +
+  theme_few()
+
+tt %>% 
+  ggplot(aes(x = EARLY_LEAVERS_RATE_Y18T24, y = SUBJ_LIFE_SAT)) +
+  geom_point(aes(colour = region)) +
+  geom_smooth(se = F, method = "lm") +
+  stat_poly_eq() + 
+  scale_colour_few() +
+  theme_few()
+
+hg_call()
+hg_call <- function(){
+  httpgd::hgd()
+  httpgd::hgd_view()
+}
+
+t1 %>% mutate(
+    region = str_sub(REG_ID, start = 1, end = 2),
+    INCOME_DISP = log(INCOME_DISP)
+  ) %>% 
+  ggplot(aes(x = INCOME_DISP, y = SUBJ_LIFE_SAT)) +
+  geom_point(aes(colour = region)) + 
+  geom_smooth(se = F, method = "lm") +
+  stat_poly_eq() +
+  scale_colour_few() +
+  theme_tufte()
+
+findout()
+
+dstruc_dgr <- OECD::get_data_structure("REGION_DEMOGR")
+dstruc_dgr$VAR
+dstruc_edu$IND
+dstruc_soen$VAR
+
+hpi <- 

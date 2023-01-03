@@ -1,0 +1,22 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'test.blg'
+[240] biber-MSWIN32:340> INFO - === 
+[294] Biber.pm:418> INFO - Reading 'test.bcf'
+[525] Biber.pm:978> INFO - Found 2 citekeys in bib section 0
+[567] Biber.pm:4401> INFO - Processing section 0
+[587] Biber.pm:4592> INFO - Looking for bibtex file 'bibtest.bib' for section 0
+[653] bibtex.pm:1713> INFO - LaTeX decoding ...
+[671] bibtex.pm:1518> INFO - Found BibTeX data source 'bibtest.bib'
+[750] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[751] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[751] Biber.pm:4221> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[751] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[772] Biber.pm:4221> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[772] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[777] bbl.pm:654> INFO - Writing 'test.bbl' with encoding 'UTF-8'
+[782] bbl.pm:757> INFO - Output to test.bbl
+[783] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\Autumn\AppData\Local\Temp\biber_tmp_MvJy\00bb96ffa5610b040b1ac57681d70866_20220.utf8, line 11, warning: 1 characters of junk seen at toplevel
+[783] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\Autumn\AppData\Local\Temp\biber_tmp_MvJy\00bb96ffa5610b040b1ac57681d70866_20220.utf8, line 21, warning: 1 characters of junk seen at toplevel
+[784] Biber.pm:132> INFO - WARNINGS: 2

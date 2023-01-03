@@ -1,0 +1,10 @@
+library(tidyverse)
+set.seed(1199)
+temp <- as_tibble(rnorm(n = 100))
+temp %>% head
+temp %>%
+  ggplot(aes(x = value)) +
+  geom_freqpoly(colour = "red")
+
+install.packages("lintr")
+lintr::lint("./")
