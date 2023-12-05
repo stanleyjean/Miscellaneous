@@ -1,3 +1,3 @@
-# 2022-2_Undergradute
+# Miscellaneous
 ## Nothing Fancy Over Here. 
 This consists of LaTex and other source code files that I played around.
