@@ -1,0 +1,29 @@
+//problem 2
+
+// the number of nodes
+int node = ...;
+
+// for designating nodes for the beginning and the end
+range start = 1..node;
+range end = 1..node;
+
+range num = 1..node;
+
+
+//the costs of each node 
+range n = 1..9;
+int c[n] = ...;
+
+int a[start][end] = ...;
+
+dvar boolean x[num];
+
+
+minimize sum( s in num) c[s]*x[s];
+
+subject to{
+  forall(j in num)
+    sum(i in num : a[i][j] == 1) x[i] >= 1;
+}
+
+ 

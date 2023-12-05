@@ -1,0 +1,33 @@
+ //problem 3
+ 
+ int worker_num = ...;
+ int job_num = ...;
+ 
+ // Target Workload
+ int TW = ...;
+ 
+ range i = 1..worker_num;
+ range j = 1..job_num;
+ 
+ // processing time for each job by each worker 
+ 
+ float PT[i][j] = ...;
+ 
+
+dvar boolean x[i][j];
+
+ dvar float+ dp[i];
+ dvar float+ dm[i];
+ 
+minimize sum(value in i) (dp[value] + dm[value]);
+  
+subject to{
+  forall(value in j)
+    sum(w in i) x[w][value] == 1;	
+  
+  forall(value in i)
+    sum(jobs in j) ((PT[value][jobs]*x[value][jobs]) - TW) == (dp[value] - dm[value]);
+    
+   sum(value in i) (dp[value] + dm[value]) >= 0;
+  
+}

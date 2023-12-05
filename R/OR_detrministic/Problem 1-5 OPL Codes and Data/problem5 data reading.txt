@@ -1,0 +1,15 @@
+ SheetConnection sheet("problem5.xlsx");
+ 
+x1_c	from SheetRead(sheet, "Sheet1!B3:B4");
+x2_c	from SheetRead(sheet, "Sheet1!C3:C4");
+x3_c	from SheetRead(sheet, "Sheet1!D3:D4");
+x4_c	from SheetRead(sheet, "Sheet1!E3:E4");
+ 
+cff		from SheetRead(sheet, "Sheet1!B7:E7");
+
+
+/*
+x1 to SheetWrite(sheet, "Sheet1!B10");
+x2 to SheetWrite(sheet, "Sheet1!C10");
+x3 to SheetWrite(sheet, "Sheet1!D10");
+x4 to SheetWrite(sheet, "Sheet1!E10");*/

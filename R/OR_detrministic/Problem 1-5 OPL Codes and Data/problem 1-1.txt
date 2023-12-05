@@ -1,0 +1,32 @@
+//problem 1-1 
+int a = 25;
+int b = 12;
+
+int x1_1 = ...;
+int x1_2 = ...;
+
+int x2_1 = ...;
+int x2_2 = ...;
+
+int x3_1 = ...;
+int x3_2 = ...;
+
+int x4_1 = ...;
+int x4_2 = ...;
+
+int cff1 = ...;
+int cff2 = ...;
+int cff3 = ...;
+int cff4 = ...;
+
+ dvar float+ x1;
+ dvar float+ x2;
+ dvar float+ x3;
+ dvar float x4;
+ 
+ maximize cff1*x1 + cff2*x2 + cff3*x3 + cff4*x4;
+ 
+ subject to{
+   x1_1*x1 + x2_1*x2 + x3_1*x3 + x4_1*x4 <= a;
+   x1_2*x1 + x2_2*x2 + x3_2*x3 + x4_2*x4 <= b;
+ }

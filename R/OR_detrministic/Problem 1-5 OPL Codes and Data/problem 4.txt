@@ -1,0 +1,24 @@
+//problem 4
+
+ int worker_num = ...;
+ int job_num = ...;
+ 
+ // Target Workload
+ int TW = ...;
+ 
+ range i = 1..worker_num;
+ range j = 1..job_num;
+ 
+ // processing time for each job by each worker 
+ 
+ float PT[i][j] = ...;
+ 
+ dvar boolean x[i][j];
+ dvar float+ over_working_time[i];
+ 
+ minimize sum(value in i) over_working_time[value];
+ 
+ subject to{
+     forall(worker_n in i)
+       sum(job_n in j) (PT[worker_n][job_n]*x[worker_n][job_n] - TW) == (over_working_time[worker_n]);
+ }

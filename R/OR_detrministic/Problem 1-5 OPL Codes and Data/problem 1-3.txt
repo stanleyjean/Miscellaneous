@@ -1,0 +1,26 @@
+//problem 1-3
+
+int a = 25;
+int b = 12;
+
+{int} n = {1, 2};
+
+int x1_c[n] = ...;
+int x2_c[n] = ...;
+int x3_c[n] = ...;
+int x4_c[n] = ...;
+
+{int} num = {1, 2, 3, 4};
+int cff[num] = ...; 
+
+ dvar float+ x1;
+ dvar float+ x2;
+ dvar float+ x3;
+ dvar float x4;
+ 
+ maximize cff[1]*x1 + cff[2]*x2 + cff[3]*x3 + cff[4]*x4;
+ 
+ subject to{
+   x1_c[1]*x1 + x2_c[1]*x2 + x3_c[1]*x3 + x4_c[1]*x4 <= a;
+   x1_c[2]*x1 + x2_c[2]*x2 + x3_c[2]*x3 + x4_c[2]*x4 <= b;
+ }
